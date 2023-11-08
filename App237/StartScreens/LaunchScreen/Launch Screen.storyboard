@@ -23,13 +23,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="L1ogo" translatesAutoresizingMaskIntoConstraints="NO" id="QbD-xF-6fk">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_big" translatesAutoresizingMaskIntoConstraints="NO" id="QbD-xF-6fk">
                                 <rect key="frame" x="71" y="354" width="251" height="144"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
-                        <color key="backgroundColor" name="prim"/>
+                        <color key="backgroundColor" name="black_bg"/>
                         <constraints>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="5cz-MP-9tL"/>
                             <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="20" symbolic="YES" id="SfN-ll-jLj"/>
@@ -43,9 +43,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="L1ogo" width="180" height="180"/>
-        <namedColor name="prim">
-            <color red="0.38400000333786011" green="0.067000001668930054" blue="0.92199999094009399" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <image name="logo_big" width="800" height="800"/>
+        <namedColor name="black_bg">
+            <color red="0.1215686351" green="0.1725490093" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

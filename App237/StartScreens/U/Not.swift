@@ -16,7 +16,7 @@ struct Not: View {
         
         ZStack {
             
-            Color("prim")
+            Color("black_bg")
                 .ignoresSafeArea()
             
             Image("Not")

@@ -16,17 +16,18 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    @AppStorage("random_id") var random_id: String = ""
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         notificationsGetStarted()
         
-        OneSignal.initialize("c021f7f6-5640-4b21-a9c5-62066718228b", withLaunchOptions: launchOptions)
-        OneSignal.login(random_id)
-        
         Apphud.start(apiKey: "app_jDdiaHX7TiDJkEpiRqpHzAiAAZMbwZ")
         Amplitude.instance().initializeApiKey("08b1dab555c562e8898b9f9482261d51")
+        OneSignal.initialize("c021f7f6-5640-4b21-a9c5-62066718228b", withLaunchOptions: launchOptions)
+        
+        Amplitude.instance().defaultTracking.sessions = true
+        Amplitude.instance().setUserId(Apphud.userID())
+        OneSignal.login(Apphud.userID())
+
         FirebaseApp.configure()
         
         return true
@@ -35,17 +36,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 func notificationsGetStarted() {
     
-    @AppStorage("random_id") var random_id: String = ""
-    
-    if random_id.isEmpty {
-        
-        let randomId = Int.random(in: 1...99999)
-        random_id = "\(randomId)"
-    }
-    
     var url = "https://onesignal-ba.com/api/os/Ktl5EXeULiQfCX8nsfJX/"
     
-    url += random_id
+    url += Apphud.userID()
     
     let request = AF.request(url, method: .get)
     

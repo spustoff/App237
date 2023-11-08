@@ -13,7 +13,7 @@ struct RSplash1: View {
 
         ZStack {
             
-            Color("prim")
+            Color("black_bg")
                 .ignoresSafeArea()
             
             Image("R1")
